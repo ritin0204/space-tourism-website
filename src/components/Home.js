@@ -1,6 +1,9 @@
 import './../styles/home.css';
 
 const Home = () => {
+  const exploreTap = () => {
+    window.location.href = '/destination';
+  }
   return (
     <div className='main'>
       <div className='description-div'>
@@ -9,10 +12,11 @@ const Home = () => {
         <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
       </div>
       <div className='image-div'>
-        <h4>EXPLORE</h4>
+        <h4 onClick={exploreTap}>EXPLORE</h4>
       </div>
     </div>
   );
 }
+
 
 export default Home;
