@@ -3,6 +3,7 @@ import './../styles/home.css';
 const Home = () => {
   const exploreTap = () => {
     window.location.href = '/destination';
+    document.getElementById("01").click();
   }
   return (
     <div className='main'>

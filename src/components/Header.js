@@ -1,36 +1,6 @@
 import logo from './../shared/logo.svg';
 import { Link } from 'react-router-dom';
-
-
-const Navlink = (props) => {
-    const handleClick = (e) => {
-        const navLinks = document.querySelectorAll('.nav li');
-        navLinks.forEach((link) => {
-            link.classList.remove('active');
-        })
-        e.currentTarget.classList.add('active');
-        document.querySelector('.nav').classList.toggle('nav-open');
-        document.querySelector('.ham').classList.toggle('open');
-    }
-    if (props.id === '00') {
-        return (
-            <li id={props.id} className='active' onClick={handleClick}>
-                <Link to={props.path} className="a-tag">
-                    <span>{props.id} </span>
-                    {props.name}
-                </Link>
-            </li>
-        );
-    }
-    return (
-        <li id={props.id} onClick={handleClick}>
-            <Link to={props.path} className="a-tag">
-                <span>{props.id} </span>
-                {props.name}
-            </Link>
-        </li>
-    );
-}
+import { useEffect, useState } from 'react';
 
 const Header = () => {
     const navLinks = [{id: '00', name: 'Home', path: '/'}, {id: '01', name: 'Destination', path: '/destination'}, {id: '02', name: 'Crew', path: '/crew'}, {id: '03', name: 'Technology', path: '/technology'}]
@@ -57,4 +27,61 @@ const Header = () => {
     )
 }
 
-export default Header
+const Navlink = (props) => {
+    const [page, setPage] = useState("home");
+    const device = useDevice();
+
+    useEffect(() => {
+        document.querySelector('body').style.backgroundImage = `url(${process.env.PUBLIC_URL}/assets/${page}/background-${page}-${device}.jpg)`;
+    }, [page, device]);
+
+    const handleClick = (e) => {
+        const navLinks = document.querySelectorAll('.nav li');
+        navLinks.forEach((link) => {
+            link.classList.remove('active');
+        })
+        setPage(window.location.pathname.slice(1) ? window.location.pathname.slice(1) : "home");
+        document.querySelector('body').style.backgroundImage = `url(${process.env.PUBLIC_URL}/assets/${page}/background-${page}-${device}.jpg)`;
+        e.currentTarget.classList.add('active');
+        e.currentTarget.children[0].click();
+        document.querySelector('.nav').classList.toggle('nav-open');
+        document.querySelector('.ham').classList.toggle('open');
+    }
+    if (window.location.pathname === props.path) {
+        return (
+            <li className='active' onClick={handleClick} id={props.id}>
+                <Link to={props.path} className="a-tag">
+                    <span>{props.id} </span>
+                    {props.name}
+                </Link>
+            </li>
+        );
+    }
+    return (
+        <li onClick={handleClick} id={props.id}>
+            <Link to={props.path} className="a-tag">
+                <span>{props.id} </span>
+                {props.name}
+            </Link>
+        </li>
+    );
+}
+
+
+const useDevice = () => {
+    const [device, setDevice ] = useState('desktop');
+
+    useEffect(() => {
+        const handleWindowResize = () => {
+            setDevice(window.innerWidth > 768 ? 'desktop' : window.innerWidth > 480 ? 'tablet' : 'mobile');
+        };
+
+        window.addEventListener('resize', handleWindowResize);
+        return () => window.removeEventListener('resize', handleWindowResize);
+    },[]);
+
+    return device;
+};
+
+export default Header;
+export { useDevice };

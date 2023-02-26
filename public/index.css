@@ -2,12 +2,12 @@
 body {
     background: black url("/assets/home/background-home-desktop.jpg") no-repeat;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-position: center;
     background-size: cover;
     margin: 0;
     padding: 0;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 .App {
     max-width: 1024px;
@@ -41,7 +41,7 @@ header .hr-div {
     border: none;
     flex-basis: 48%;
 }
-hr {
+.hr-div hr {
     position: absolute;
     top:40px;
     left:80px;
@@ -100,17 +100,18 @@ header ul .active, header ul .active:hover {
     header{
         justify-content: center;
     }
-    hr {
+    .hr-div hr {
         border: none;
     }
     header ul {
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: none;
+        margin: 0;
     }
     header ul li {
         position: relative;
         left: -20px;
-        padding: 20px 0;
+        padding: 30px 0;
     }
     header ul li .a-tag {
         font-weight: 400;
@@ -126,6 +127,7 @@ header ul .active, header ul .active:hover {
     body {
         background: url("/assets/home/background-home-mobile.jpg") no-repeat;
         background-size: cover;
+        height: 100%;
     }
     header{
         justify-content: space-between;
@@ -184,5 +186,31 @@ header ul .active, header ul .active:hover {
     }
     header ul li .a-tag span{
         display: inline-block;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes planetSlideLeft {
+    0% {
+        scale: 0;
+        transform: translateX(100%) rotateZ(180deg);
+    }
+    100% {
+        scale: 1;
+        transform: translateX(0%) rotateZ(0deg);
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
     }
 }

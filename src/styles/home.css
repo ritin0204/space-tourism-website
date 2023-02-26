@@ -12,6 +12,7 @@
     max-width: 1024px;
     font-family: 'Bellefair' , serif;
     padding: 5%;
+    animation: slideUp 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 forwards ;
 }
 .main h5 {
     color: rgba(208, 214, 249, 0.785);
@@ -47,7 +48,7 @@
     font-family: 'Bellefair', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 140px;
+    font-size: 130px;
     line-height: 142px;
     margin: 0;
 }
@@ -91,22 +92,63 @@
         position: relative;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: auto 1fr;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
         margin: 0;
+        padding: 0;
         margin-top: 10%;
         text-align: center;
     }
+    .main h5 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+    }
     .description-div{
         margin: auto;
+    }
+    .description-div p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
     }
     .description-div h1{
         font-size: 120px;
     }
     .image-div {
         position: relative;
+    }
+}
+@media  screen and (max-width:426px) {
+    .main h5 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+    }
+    .description-div h1{
+        font-size: 90px;
+        line-height: 100px;
+    }
+    .description-div {
+        width: 90%;
+    }
+    .description-div p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .image-div h4 {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        margin: 20px;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 2px;
     }
 }
