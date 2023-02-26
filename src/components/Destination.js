@@ -17,7 +17,7 @@ const Destination = () => {
         <div className="destination-main">
             <h1 className="destination-head-title"><span>01 </span>Pick your destination</h1>
             <picture className="main-img" key={planet.images.png}>
-                <source className="planet-img" media="(max-width: 450px)" srcSet={planet.images.webp} />
+                <source className="planet-img" srcSet={planet.images.webp} />
                 <img className="planet-img" src={planet.images.png} alt={planet.name}/>
             </picture>
             <div className="planet-details">

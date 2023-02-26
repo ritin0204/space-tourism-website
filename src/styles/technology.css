@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+.tech-main{
+    color: white;
+}
+.tech-head-title{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 2.725px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-left:100px
+}
+.tech-head-title span {
+    font-weight: 700;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+.tech-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.tech-container .tech-tabs li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #000000;
+    text-align: center;
+    color: #FFFFFF;
+    border: #ffffff78 1px solid;
+    width: 50px;
+    height: 50px;
+    margin: 20px 50px;
+}
+.tech-tabs li:hover {
+    border: #ffffff 1.5px solid;
+}
+.tech-tabs li.active {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.tech-info {
+    max-width: 400px;
+    width: 40%;
+}
+.tech-info :nth-child(1) {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: #D0D6F9;
+    margin: 10px 0;
+}
+.tech-info .description {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #D0D6F9;
+}
+.tech-info h1 {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.tech-img img{
+    position: relative;
+    left: 50px;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .tech-head-title{
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 1.5px;
+        margin-left:50px;
+    }
+    .tech-container{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .tech-tabs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        padding: 0;
+        order: 2;
+    }
+    .tech-container .tech-tabs li{
+        margin: 15px;
+    }
+    .tech-info {
+        text-align: center;
+        width: 70%;
+        max-width: none;
+        order: 3;
+    }
+    .tech-img{
+        order: 1;
+        margin: 40px 0;
+    }
+    .tech-img img{
+        position: relative;
+        left: 0px;
+        width: 100vw;
+    }
+}
+@media screen and (max-width: 426px) {
+    .tech-head-title{
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        margin-left:0px;
+        text-align: center;
+    }
+    .tech-container .tech-tabs li{
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+    }
+    .tech-info {
+        width: 95%;
+    }
+    .tech-info :nth-child(1) {
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 1.7px;
+    }
+    .tech-info .description {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+    }
+    .tech-info h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .tech-img{
+        margin: 10px 0;
+    }
+}

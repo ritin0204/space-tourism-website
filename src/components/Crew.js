@@ -8,12 +8,12 @@ const Crew = () => {
     const [crewIndex, setCrewIndex] = useState(0);
     // const [intervalTime, setIntervalTime] = useState(true);
     const handleChangeCrew = (e) => {
-        setCrew(data.crew[e.currentTarget.id]);
-        setCrewIndex(e.currentTarget.id);
+        setCrew(data.crew[e.target.id]);
+        setCrewIndex(e.target.id);
         document.querySelectorAll('.crew-tabs li').forEach((item) => {
             item.classList.remove('active');
         });
-        e.currentTarget.classList.add('active');
+        e.target.classList.add('active');
     }
     // const changeCrew = () => {
     //     let id = (crewIndex + 1) % 4;
@@ -45,7 +45,7 @@ const Crew = () => {
                 </ul>
             </div>
             <picture className="crew-main-img" key={crewIndex}>
-                <source className="crew-img" media="(max-width: 450px)" srcSet={crew.images.webp} />
+                <source className="crew-img" srcSet={crew.images.webp} />
                 <img className="crew-img" src={crew.images.png} alt={crew.name}/>
             </picture>
         </div>
