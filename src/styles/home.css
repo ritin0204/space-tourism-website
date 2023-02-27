@@ -60,13 +60,13 @@
     justify-content: center;
     align-items: center;
 }
-.image-div h4:hover{
+.image-div .explore:hover{
     -webkit-box-shadow: -1px 1px 0px 50px rgba(255,255,255,0.1);
     -moz-box-shadow: -1px 1px 0px 50px rgba(255,255,255,0.1);
     box-shadow: -1px 1px 0px 50px rgba(255,255,255,0.1);
     transition: box-shadow 0.5s ease-in-out;
 }
-.image-div h4 {
+.image-div .explore {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     width: 200px;
@@ -142,7 +142,7 @@
         font-size: 18px;
         line-height: 28px;
     }
-    .image-div h4 {
+    .image-div .explore {
         width: 170px;
         height: 170px;
         border-radius: 50%;
