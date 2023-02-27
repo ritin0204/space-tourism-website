@@ -30,6 +30,7 @@ header {
     z-index: 1;
     box-sizing: border-box;
 }
+/* testing some code  */
 header .logo {
     width: 40px;
     height: 40px;
@@ -45,7 +46,7 @@ header .hr-div {
 .hr-div hr {
     position: absolute;
     top:40px;
-    left:80px;
+    left:60px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 28%;
     z-index: 2;
@@ -63,8 +64,8 @@ header ul {
 header ul li {
     position: relative;
     left: -40px;
-    padding: 16px 0;
-    margin:0 15px;
+    padding: 20px 0;
+    margin:0 20px;
 }
 header ul li .a-tag {
     text-decoration: none;
@@ -109,6 +110,7 @@ header ul .active, header ul .active:hover {
         position: relative;
         left: -20px;
         padding: 30px 0;
+        margin:0 18px;
     }
     header ul li .a-tag {
         font-weight: 400;

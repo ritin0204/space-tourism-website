@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/space-tourism-website-using-reactjs-6TrHfoYxIz)
-- Live Site URL: [Add live site URL here](https://space-tourism-37da7.web.app/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/space-tourism-website-using-reactjs-6TrHfoYxIz)
+- Live Site URL: [Visit Live](https://space-tourism-37da7.web.app/)
 
 
 ### Built with
