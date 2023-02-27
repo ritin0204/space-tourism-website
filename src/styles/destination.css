@@ -27,12 +27,12 @@
     mix-blend-mode: normal;
     opacity: 0.5;
 }
-.planet-info{
+/* .planet-info{
     animation: slideLeft 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 forwards ;
 }
 .main-img{
     animation: planetSlideLeft 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 forwards ;
-}
+} */
 .planet-img{
     max-width: 300px;
 }

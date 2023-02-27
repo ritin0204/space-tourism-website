@@ -3,8 +3,7 @@ body {
     background: black url("/assets/home/background-home-desktop.jpg") no-repeat;
     width: 100vw;
     min-height: 100vh;
-    background-position: center;
-    background-size: cover;
+    background-size: cover cover;
     margin: 0;
     padding: 0;
     overflow-x:hidden;
@@ -93,10 +92,6 @@ header ul .active, header ul .active:hover {
 
 /* Path: public/App.js */
 @media screen and (max-width:768px){
-    body {
-        background: url("/assets/home/background-home-tablet.jpg") no-repeat;
-        background-size: cover;
-    }
     header{
         justify-content: center;
     }
@@ -124,11 +119,6 @@ header ul .active, header ul .active:hover {
 }
 
 @media screen and (max-width:426px) {
-    body {
-        background: url("/assets/home/background-home-mobile.jpg") no-repeat;
-        background-size: cover;
-        height: 100%;
-    }
     header{
         justify-content: space-between;
         margin: 0px;
