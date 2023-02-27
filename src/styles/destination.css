@@ -27,12 +27,12 @@
     mix-blend-mode: normal;
     opacity: 0.5;
 }
-/* .planet-info{
+.planet-info{
     animation: slideLeft 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 forwards ;
 }
 .main-img{
     animation: planetSlideLeft 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 forwards ;
-} */
+}
 .planet-img{
     max-width: 300px;
 }
@@ -124,7 +124,7 @@
 
 @media screen and (max-width:768px) {
     .destination-main{
-        top: 20px;
+        top: 0px;
         grid-template-columns: 1fr;
         grid-template-rows:repeat(3, auto);
     }
@@ -181,9 +181,10 @@
         color: #D0D6F9;
     }
     .distance p, .time p {
-        font-size: 30px;
+        font-size: 22px;
         font-weight: 500;
         line-height: 26px;
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 426px) {
@@ -202,10 +203,10 @@
     }
     .planet-info h2 {
         font-size: 80px;
-        padding:20px 0px;
+        padding: 0px;
     }
     .planet-info p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 26px;
         letter-spacing: 1px;
     }
@@ -218,7 +219,7 @@
         margin-top: 20px;
     }
     .distance p, .time p {
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 500;
         line-height: 26px;
     }

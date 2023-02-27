@@ -28,7 +28,7 @@ const Header = () => {
 }
 
 const Navlink = (props) => {
-    const [page, setPage] = useState("home");
+    const [page, setPage] = useState(window.location.pathname.slice(1) ? window.location.pathname.slice(1) : "home");
     const device = useDevice();
 
     useEffect(() => {
@@ -44,8 +44,6 @@ const Navlink = (props) => {
         document.querySelector('body').style.backgroundImage = `url(${process.env.PUBLIC_URL}/assets/${page}/background-${page}-${device}.jpg)`;
         e.currentTarget.classList.add('active');
         e.currentTarget.children[0].click();
-        document.querySelector('.nav').classList.toggle('nav-open');
-        document.querySelector('.ham').classList.toggle('open');
     }
     if (window.location.pathname === props.path) {
         return (
